@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - DevOps Engineer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Votre Nom</h1>
+            <p class="subtitle">DevOps Engineer & Cloud Infrastructure Specialist</p>
+            <div class="command-line">kubectl get developer --name=votreNom<span class="cursor">|</span></div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="#about">À propos</a>
+            <a href="#experience">Expérience</a>
+            <a href="#projects">Projets</a>
+            <a href="#skills">Compétences</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2 class="section-title">À propos</h2>
+            <div class="about-content">
+                <p>Passionné par l'automatisation et l'infrastructure cloud, je conçois et maintiens des environnements DevOps robustes et scalables. Mon expertise couvre l'ensemble du cycle de vie des applications, de l'intégration continue au déploiement en production.</p>
+                <br>
+                <p>J'aime résoudre des problèmes complexes d'infrastructure, optimiser les performances et améliorer la collaboration entre les équipes de développement et d'exploitation.</p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2 class="section-title">Expérience Professionnelle</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Présent</div>
+                    <div class="timeline-content">
+                        <h3 class="job-title">DevOps Engineer Senior</h3>
+                        <h4 class="company">Entreprise Tech • Paris</h4>
+                        <div class="job-description">
+                            <p>Responsable de l'infrastructure cloud et de l'automatisation des déploiements pour une équipe de 15 développeurs.</p>
+                            <ul class="achievements">
+                                <li>Réduction de 60% du temps de déploiement grâce à l'implémentation de GitOps</li>
+                                <li>Migration de l'infrastructure vers Kubernetes (EKS) avec zero-downtime</li>
+                                <li>Mise en place du monitoring complet avec SLA 99.9%</li>
+                            </ul>
+                        </div>
+                        <div class="job-tech-stack">
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">GitLab CI</span>
+                            <span class="tech-tag">Prometheus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 - 2023</div>
+                    <div class="timeline-content">
+                        <h3 class="job-title">DevOps Engineer</h3>
+                        <h4 class="company">StartUp Innovante • Remote</h4>
+                        <div class="job-description">
+                            <p>Création et maintenance de l'infrastructure complète d'une startup en hypercroissance.</p>
+                            <ul class="achievements">
+                                <li>Automatisation complète des déploiements (0 déploiement manuel)</li>
+                                <li>Optimisation des coûts cloud (-40% sur la facture AWS)</li>
+                                <li>Implémentation de la stratégie backup et disaster recovery</li>
+                            </ul>
+                        </div>
+                        <div class="job-tech-stack">
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Ansible</span>
+                            <span class="tech-tag">Jenkins</span>
+                            <span class="tech-tag">Grafana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2019 - 2021</div>
+                    <div class="timeline-content">
+                        <h3 class="job-title">Administrateur Système</h3>
+                        <h4 class="company">ESN Régionale • Lyon</h4>
+                        <div class="job-description">
+                            <p>Administration des infrastructures clients et transition vers le DevOps.</p>
+                            <ul class="achievements">
+                                <li>Migration de 20+ serveurs physiques vers le cloud</li>
+                                <li>Formation des équipes aux pratiques DevOps</li>
+                                <li>Automatisation des tâches récurrentes avec Ansible</li>
+                            </ul>
+                        </div>
+                        <div class="job-tech-stack">
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">VMware</span>
+                            <span class="tech-tag">Bash</span>
+                            <span class="tech-tag">NGINX</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 class="project-title">Pipeline CI/CD Multi-environnements</h3>
+                    <p class="project-description">
+                        Mise en place d'un pipeline complet avec GitLab CI, Docker et Kubernetes pour automatiser les déploiements sur plusieurs environnements (dev, staging, prod).
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">GitLab CI</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Helm</span>
+                        <span class="tech-tag">ArgoCD</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">🔗 GitHub</a>
+                        <a href="#" class="project-link">📖 Documentation</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Infrastructure as Code AWS</h3>
+                    <p class="project-description">
+                        Création d'une infrastructure AWS complète avec Terraform, incluant VPC, EKS, RDS et monitoring avec Prometheus/Grafana.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">EKS</span>
+                        <span class="tech-tag">Prometheus</span>
+                        <span class="tech-tag">Grafana</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">🔗 GitHub</a>
+                        <a href="#" class="project-link">🚀 Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Monitoring & Observabilité</h3>
+                    <p class="project-description">
+                        Stack complète de monitoring avec Prometheus, Grafana, AlertManager et ELK Stack pour la centralisation des logs et métriques.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Prometheus</span>
+                        <span class="tech-tag">Grafana</span>
+                        <span class="tech-tag">ELK Stack</span>
+                        <span class="tech-tag">AlertManager</span>
+                        <span class="tech-tag">Jaeger</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">🔗 GitHub</a>
+                        <a href="#" class="project-link">📊 Dashboard</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Automatisation Ansible</h3>
+                    <p class="project-description">
+                        Collection de playbooks Ansible pour l'automatisation de configurations serveurs, déploiements applicatifs et gestion des secrets.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Ansible</span>
+                        <span class="tech-tag">Vault</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">NGINX</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">🔗 GitHub</a>
+                        <a href="#" class="project-link">📋 Playbooks</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>🐳 Containerisation</h3>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Helm</li>
+                        <li>Docker Compose</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>☁️ Cloud Platforms</h3>
+                    <ul>
+                        <li>AWS (EC2, EKS, RDS)</li>
+                        <li>Azure DevOps</li>
+                        <li>Google Cloud Platform</li>
+                        <li>DigitalOcean</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🔧 Infrastructure as Code</h3>
+                    <ul>
+                        <li>Terraform</li>
+                        <li>Ansible</li>
+                        <li>CloudFormation</li>
+                        <li>Pulumi</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>📊 Monitoring & Logs</h3>
+                    <ul>
+                        <li>Prometheus & Grafana</li>
+                        <li>ELK Stack</li>
+                        <li>Datadog</li>
+                        <li>New Relic</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🚀 CI/CD</h3>
+                    <ul>
+                        <li>GitLab CI</li>
+                        <li>GitHub Actions</li>
+                        <li>Jenkins</li>
+                        <li>ArgoCD</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>💾 Databases & Storage</h3>
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Redis</li>
+                        <li>S3/MinIO</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-info">
+                <p>Intéressé par une collaboration ? N'hésitez pas à me contacter !</p>
+                <div class="contact-links">
+                    <a href="mailto:votre.email@exemple.com" class="contact-link">
+                        📧 Email
+                    </a>
+                    <a href="https://linkedin.com/in/votre-profil" class="contact-link">
+                        💼 LinkedIn
+                    </a>
+                    <a href="https://github.com/votre-username" class="contact-link">
+                        🐙 GitHub
+                    </a>
+                    <a href="tel:+33123456789" class="contact-link">
+                        📞 Téléphone
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
