@@ -1,4 +1,9 @@
-// Smooth scrolling for navigation links
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.getElementById('loading').classList.add('hidden');
+    }, 1000);
+});
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -12,40 +17,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add typing effect to command line
-const commandElement = document.querySelector('.command-line');
-const originalText = 'kubectl get developer --name=votreNom';
-let i = 0;
+const navDots = document.querySelectorAll('.nav-dot');
+const sections = ['hero', 'projects', 'contact'];
 
-function typeWriter() {
-    if (i < originalText.length) {
-        commandElement.innerHTML = originalText.substring(0, i + 1) + '<span class="cursor">|</span>';
-        i++;
-        setTimeout(typeWriter, 100);
-    }
-}
-
-// Start typing animation after page load
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        commandElement.innerHTML = '<span class="cursor">|</span>';
-        i = 0;
-        typeWriter();
-    }, 1000);
-});
-
-// Add hover effects for project cards
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-5px) scale(1.02)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
+navDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        const section = document.getElementById(sections[index]);
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
 
-// Add scroll animation for timeline items
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop - window.innerHeight / 2) {
+            current = sectionId;
+        }
+    });
+
+    navDots.forEach((dot, index) => {
+        dot.classList.remove('active');
+        if (sections[index] === current) {
+            dot.classList.add('active');
+        }
+    });
+});
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -54,111 +54,102 @@ const observerOptions = {
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateX(0)';
+            entry.target.classList.add('animate');
         }
     });
 }, observerOptions);
 
-// Initialize timeline animations
 document.addEventListener('DOMContentLoaded', () => {
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    
-    timelineItems.forEach((item, index) => {
-        // Set initial state
-        item.style.opacity = '0';
-        item.style.transform = 'translateX(-50px)';
-        item.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
-        
-        // Observe for animation
-        observer.observe(item);
-    });
-    
-    // Animate skill categories
-    const skillCategories = document.querySelectorAll('.skill-category');
-    skillCategories.forEach((category, index) => {
-        category.style.opacity = '0';
-        category.style.transform = 'translateY(30px)';
-        category.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        
-        observer.observe(category);
-    });
-    
-    // Animate project cards
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
-        
+        card.style.transitionDelay = `${index * 0.2}s`;
         observer.observe(card);
     });
-});
-
-// Add active navigation state
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav a');
     
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach(element => {
+        observer.observe(element);
     });
 });
 
-// Add particle effect on mouse move (optional cool effect)
-document.addEventListener('mousemove', (e) => {
-    const cursor = document.createElement('div');
-    cursor.style.position = 'fixed';
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    cursor.style.width = '4px';
-    cursor.style.height = '4px';
-    cursor.style.background = '#34d399';
-    cursor.style.borderRadius = '50%';
-    cursor.style.pointerEvents = 'none';
-    cursor.style.opacity = '0.7';
-    cursor.style.zIndex = '9999';
-    cursor.style.transition = 'opacity 0.5s ease';
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+    });
     
-    document.body.appendChild(cursor);
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
     
-    setTimeout(() => {
-        cursor.style.opacity = '0';
+    card.addEventListener('click', function() {
+        this.style.transform = 'translateY(-5px) scale(0.98)';
         setTimeout(() => {
-            if (cursor.parentNode) {
-                cursor.parentNode.removeChild(cursor);
-            }
-        }, 500);
-    }, 200);
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        }, 100);
+        
+        const url = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+        if (url !== '#') {
+            window.open(url, '_blank');
+        }
+    });
 });
 
-// Console easter egg
-console.log(`
-    ╔══════════════════════════════════════╗
-    ║          🚀 Portfolio DevOps          ║
-    ║                                      ║
-    ║  Merci d'avoir visité mon portfolio! ║
-    ║  Si tu vois ce message, tu es        ║
-    ║  probablement un développeur... 👨‍💻   ║
-    ║                                      ║
-    ║  N'hésite pas à me contacter !       ║
-    ╚══════════════════════════════════════╝
-`);
+let ticking = false;
 
-// Add performance monitoring
+function updateScrollEffects() {
+    const scrolled = window.pageYOffset;
+    const rate = scrolled * -0.5;
+    
+    const hero = document.querySelector('.hero-content');
+    if (hero) {
+        hero.style.transform = `translateY(${rate * 0.3}px)`;
+    }
+    
+    ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(updateScrollEffects);
+        ticking = true;
+    }
+});
+
 window.addEventListener('load', () => {
-    const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
-    console.log(`⚡ Page chargée en ${loadTime}ms`);
+    const loadTime = performance.now();
+    console.log(`⚡ Portfolio chargé en ${Math.round(loadTime)}ms`);
+    
+    if ('performance' in window) {
+        const timing = performance.timing;
+        const loadTime = timing.loadEventEnd - timing.navigationStart;
+        console.log(`📊 Temps de chargement complet: ${loadTime}ms`);
+    }
 });
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' || e.key === 'j') {
+        e.preventDefault();
+        const currentSection = getCurrentSection();
+        const nextIndex = Math.min(sections.indexOf(currentSection) + 1, sections.length - 1);
+        document.getElementById(sections[nextIndex]).scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    if (e.key === 'ArrowUp' || e.key === 'k') {
+        e.preventDefault();
+        const currentSection = getCurrentSection();
+        const prevIndex = Math.max(sections.indexOf(currentSection) - 1, 0);
+        document.getElementById(sections[prevIndex]).scrollIntoView({ behavior: 'smooth' });
+    }
+});
+
+function getCurrentSection() {
+    let current = 'hero';
+    sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        const sectionTop = section.offsetTop;
+        if (window.pageYOffset >= sectionTop - window.innerHeight / 2) {
+            current = sectionId;
+        }
+    });
+    return current;
+}

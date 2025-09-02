@@ -3,268 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio - DevOps Engineer</title>
+    <title>Alain Cheng - DevOps Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="loading-overlay" id="loading">
+        <div class="loader"></div>
+    </div>
+
+    <div class="bg-animation"></div>
+
+    <nav class="nav-dots">
+        <div class="nav-dot active" data-section="hero" data-label="Accueil"></div>
+        <div class="nav-dot" data-section="projects" data-label="Projets"></div>
+        <div class="nav-dot" data-section="contact" data-label="Contact"></div>
+    </nav>
+
     <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1>Alain Cheng</h1>
-            <p class="subtitle">Ingénieure DevOps</p>
-            <div class="command-line">kubectl get developer --name=acheng<span class="cursor">|</span></div>
-        </header>
-
-        <!-- Navigation -->
-        <nav class="nav">
-            <a href="#about">À propos</a>
-            <a href="#experience">Expérience</a>
-            <a href="#projects">Projets</a>
-            <a href="#skills">Compétences</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <!-- About Section -->
-        <section id="about" class="section">
-            <h2 class="section-title">À propos</h2>
-            <div class="about-content">
-                <p>Passionné par l'automatisation et l'infrastructure cloud, je conçois et maintiens des environnements DevOps robustes et scalables. Mon expertise couvre l'ensemble du cycle de vie des applications, de l'intégration continue au déploiement en production.</p>
-                <br>
-                <p>J’aime découvrir de nouveaux projets open source, les explorer, les tester et en tirer des idées pour améliorer les pratiques et outils que j’utilise au quotidien.</p>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Alain Cheng</h1>
+                <p class="subtitle">DevOps Engineer & Cloud Architect</p>
+                <p class="description">
+                    Je conçois et développe des infrastructures cloud modernes, 
+                    automatise les déploiements et crée des solutions DevOps scalables. 
+                    Passionné par l'innovation et l'open source.
+                </p>
+                <a href="#projects" class="cta-button">
+                    🚀 Découvrir mes projets
+                </a>
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <h2 class="section-title">Expérience Professionnelle</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2023 - Présent</div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">DevOps Engineer Senior</h3>
-                        <h4 class="company">Entreprise Tech • Paris</h4>
-                        <div class="job-description">
-                            <p>Responsable de l'infrastructure cloud et de l'automatisation des déploiements pour une équipe de 15 développeurs.</p>
-                            <ul class="achievements">
-                                <li>Réduction de 60% du temps de déploiement grâce à l'implémentation de GitOps</li>
-                                <li>Migration de l'infrastructure vers Kubernetes (EKS) avec zero-downtime</li>
-                                <li>Mise en place du monitoring complet avec SLA 99.9%</li>
-                            </ul>
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">Mes Projets</h2>
+                
+                <div class="projects-grid">
+                    <!-- Project 1: AudioProthèse+ -->
+                    <div class="project-card" onclick="window.open('#', '_blank')">
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            Projet d'études M2
                         </div>
-                        <div class="job-tech-stack">
+                        <h3 class="project-title">
+                            Infrastructure DevOps AudioProthèse+
+                        </h3>
+                        <p class="project-description">
+                            Architecture DevOps complète pour un réseau de 50+ centres d'audioprothèse. 
+                            Implémentation d'une infrastructure cloud sécurisée avec conformité RGPD, 
+                            automatisation des déploiements et observabilité centralisée.
+                        </p>
+                        <div class="tech-stack">
                             <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">AWS</span>
                             <span class="tech-tag">Terraform</span>
                             <span class="tech-tag">GitLab CI</span>
                             <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                🔗 GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                📖 Documentation
+                            </a>
                         </div>
                     </div>
-                </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">2021 - 2023</div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">DevOps Engineer</h3>
-                        <h4 class="company">StartUp Innovante • Remote</h4>
-                        <div class="job-description">
-                            <p>Création et maintenance de l'infrastructure complète d'une startup en hypercroissance.</p>
-                            <ul class="achievements">
-                                <li>Automatisation complète des déploiements (0 déploiement manuel)</li>
-                                <li>Optimisation des coûts cloud (-40% sur la facture AWS)</li>
-                                <li>Implémentation de la stratégie backup et disaster recovery</li>
-                            </ul>
+                    <!-- Project 2: CLI Golang -->
+                    <div class="project-card" onclick="window.open('#', '_blank')">
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            Projet d'études M1
                         </div>
-                        <div class="job-tech-stack">
+                        <h3 class="project-title">
+                            CLI d'Authentification Golang
+                        </h3>
+                        <p class="project-description">
+                            Interface en ligne de commande développée en Go pour l'intégration de solutions 
+                            d'authentification modernes. Gestion complète des utilisateurs, permissions et 
+                            tokens JWT avec une architecture API REST robuste.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Golang</span>
+                            <span class="tech-tag">Cobra</span>
+                            <span class="tech-tag">PocketBase</span>
+                            <span class="tech-tag">JWT</span>
                             <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Ansible</span>
-                            <span class="tech-tag">Jenkins</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                🔗 GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                ⚡ Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Homelab -->
+                    <div class="project-card" onclick="window.open('#', '_blank')">
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            En cours d'évolution
+                        </div>
+                        <h3 class="project-title">
+                            Homelab Kubernetes sur Raspberry Pi
+                        </h3>
+                        <p class="project-description">
+                            Cluster Kubernetes mono-nœud sur Raspberry Pi hébergeant mon portfolio, 
+                            pipelines CI/CD, monitoring complet et stockage distribué. 
+                            Plateforme d'expérimentation pour tester les dernières technologies DevOps.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Raspberry Pi</span>
+                            <span class="tech-tag">ArgoCD</span>
+                            <span class="tech-tag">Prometheus</span>
                             <span class="tech-tag">Grafana</span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2019 - 2021</div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">Administrateur Système</h3>
-                        <h4 class="company">ESN Régionale • Lyon</h4>
-                        <div class="job-description">
-                            <p>Administration des infrastructures clients et transition vers le DevOps.</p>
-                            <ul class="achievements">
-                                <li>Migration de 20+ serveurs physiques vers le cloud</li>
-                                <li>Formation des équipes aux pratiques DevOps</li>
-                                <li>Automatisation des tâches récurrentes avec Ansible</li>
-                            </ul>
-                        </div>
-                        <div class="job-tech-stack">
-                            <span class="tech-tag">Linux</span>
-                            <span class="tech-tag">VMware</span>
-                            <span class="tech-tag">Bash</span>
-                            <span class="tech-tag">NGINX</span>
-                            <span class="tech-tag">MySQL</span>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                🔗 GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                📊 Monitoring
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Project 4: API Certificats SSL/TLS -->
+                    <div class="project-card" onclick="window.open('#', '_blank')">
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            Déployé en production
+                        </div>
+                        <h3 class="project-title">
+                            API de Gestion de Certificats SSL/TLS
+                        </h3>
+                        <p class="project-description">
+                            Solution complète de gestion du cycle de vie des certificats avec API REST sécurisée, 
+                            authentification PocketBase, chiffrement AES-256-GCM et déploiement automatisé via 
+                            GitLab CI/CD sur AWS ECS Fargate. Notifications automatiques d'expiration incluses.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Golang</span>
+                            <span class="tech-tag">Echo</span>
+                            <span class="tech-tag">PocketBase</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">GitLab CI</span>
+                            <span class="tech-tag">AWS ECS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                🔗 GitLab
+                            </a>
+                            <a href="#" class="project-link">
+                                📖 Documentation
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Plateforme DevOps Scalable -->
+                    <div class="project-card" onclick="window.open('#', '_blank')">
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            Projet d'études M2
+                        </div>
+                        <h3 class="project-title">
+                            Plateforme DevOps Cloud Native
+                        </h3>
+                        <p class="project-description">
+                            Architecture DevOps cloud native complète évoluant en 8 phases d'un monolithe vers 
+                            une solution containerisée avec EKS, pipeline CI/CD GitOps, monitoring ELK Stack et 
+                            gestion multi-environnements automatisée.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">EKS</span>
+                            <span class="tech-tag">ArgoCD</span>
+                            <span class="tech-tag">GitLab CI</span>
+                            <span class="tech-tag">ELK Stack</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                🔗 GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                📖 Documentation
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Portfolio CLI Terminal -->
+                    <div class="project-card" onclick="window.open('#', '_blank')">
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            En cours de production
+                        </div>
+                        <h3 class="project-title">
+                            Portfolio CLI
+                        </h3>
+                        <p class="project-description">
+                            Portfolio innovant sous forme de terminal interactif développé en Go avec interface WebSocket.
+                            Navigation par commandes pour découvrir mon profil et mes projets, avec redirection automatique 
+                            vers le portfolio web traditionnel selon l'intérêt du visiteur.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Golang</span>
+                            <span class="tech-tag">Gin/Echo</span>
+                            <span class="tech-tag">WebSocket</span>
+                            <span class="tech-tag">xterm.js</span>
+                            <span class="tech-tag">Terminal UI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                🔗 GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                💻 Terminal Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: Windows Setup Automation -->
+                    <div class="project-card" onclick="window.open('#', '_blank')">
+                        <div class="project-status">
+                            <span class="status-dot"></span>
+                            Automatisation complète
+                        </div>
+                        <h3 class="project-title">
+                            Windows Setup
+                        </h3>
+                        <p class="project-description">
+                            Automatisation complète de l'installation d'un nouvel environnement Windows avec PowerShell et Ansible. 
+                            Bootstrap initial via winget, puis configuration WSL2 complet avec Ansible.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Ansible</span>
+                            <span class="tech-tag">PowerShell</span>
+                            <span class="tech-tag">WSL2</span>
+                            <span class="tech-tag">Winget</span>
+                            <span class="tech-tag">Windows</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/cheng-alain/windows_setup" class="project-link">
+                                🔗 GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                🚀 Demo Setup
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <h2 class="section-title">Projets</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3 class="project-title">Pipeline CI/CD Multi-environnements</h3>
-                    <p class="project-description">
-                        Mise en place d'un pipeline complet avec GitLab CI, Docker et Kubernetes pour automatiser les déploiements sur plusieurs environnements (dev, staging, prod).
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">GitLab CI</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Helm</span>
-                        <span class="tech-tag">ArgoCD</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">🔗 GitHub</a>
-                        <a href="#" class="project-link">📖 Documentation</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3 class="project-title">Infrastructure as Code AWS</h3>
-                    <p class="project-description">
-                        Création d'une infrastructure AWS complète avec Terraform, incluant VPC, EKS, RDS et monitoring avec Prometheus/Grafana.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">EKS</span>
-                        <span class="tech-tag">Prometheus</span>
-                        <span class="tech-tag">Grafana</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">🔗 GitHub</a>
-                        <a href="#" class="project-link">🚀 Demo</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3 class="project-title">Monitoring & Observabilité</h3>
-                    <p class="project-description">
-                        Stack complète de monitoring avec Prometheus, Grafana, AlertManager et ELK Stack pour la centralisation des logs et métriques.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Prometheus</span>
-                        <span class="tech-tag">Grafana</span>
-                        <span class="tech-tag">ELK Stack</span>
-                        <span class="tech-tag">AlertManager</span>
-                        <span class="tech-tag">Jaeger</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">🔗 GitHub</a>
-                        <a href="#" class="project-link">📊 Dashboard</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3 class="project-title">Automatisation Ansible</h3>
-                    <p class="project-description">
-                        Collection de playbooks Ansible pour l'automatisation de configurations serveurs, déploiements applicatifs et gestion des secrets.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Ansible</span>
-                        <span class="tech-tag">Vault</span>
-                        <span class="tech-tag">Linux</span>
-                        <span class="tech-tag">NGINX</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">🔗 GitHub</a>
-                        <a href="#" class="project-link">📋 Playbooks</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <h2 class="section-title">Compétences</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>🐳 Containerisation</h3>
-                    <ul>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>Helm</li>
-                        <li>Docker Compose</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>☁️ Cloud Platforms</h3>
-                    <ul>
-                        <li>AWS (EC2, EKS, RDS)</li>
-                        <li>Azure DevOps</li>
-                        <li>Google Cloud Platform</li>
-                        <li>DigitalOcean</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>🔧 Infrastructure as Code</h3>
-                    <ul>
-                        <li>Terraform</li>
-                        <li>Ansible</li>
-                        <li>CloudFormation</li>
-                        <li>Pulumi</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>📊 Monitoring & Logs</h3>
-                    <ul>
-                        <li>Prometheus & Grafana</li>
-                        <li>ELK Stack</li>
-                        <li>Datadog</li>
-                        <li>New Relic</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>🚀 CI/CD</h3>
-                    <ul>
-                        <li>GitLab CI</li>
-                        <li>GitHub Actions</li>
-                        <li>Jenkins</li>
-                        <li>ArgoCD</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>💾 Databases & Storage</h3>
-                    <ul>
-                        <li>PostgreSQL</li>
-                        <li>MongoDB</li>
-                        <li>Redis</li>
-                        <li>S3/MinIO</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
+        <section id="contact" class="contact-section fade-in">
             <h2 class="section-title">Contact</h2>
-            <div class="contact-info">
-                <p>Intéressé par une collaboration ? N'hésitez pas à me contacter !</p>
+            
+            <div class="contact-simple">
+                <p class="contact-text">
+                    Une question ? Une opportunité ? Contactez-moi :
+                </p>
+                
                 <div class="contact-links">
-                    <a href="mailto:votre.email@exemple.com" class="contact-link">
-                        📧 Email
+                    <a href="mailto:Alain.cheng@protonmail.com" class="contact-link">
+                        <span class="contact-icon">📧</span>
+                        Email : Alain.cheng@protonmail.com
                     </a>
-                    <a href="https://linkedin.com/in/votre-profil" class="contact-link">
-                        💼 LinkedIn
+                    <a href="https://www.linkedin.com/in/alain-cheng" target="_blank" class="contact-link">
+                        <span class="contact-icon">💼</span>
+                        LinkedIn : /in/alain-cheng
                     </a>
-                    <a href="https://github.com/votre-username" class="contact-link">
-                        🐙 GitHub
-                    </a>
-                    <a href="tel:+33123456789" class="contact-link">
-                        📞 Téléphone
+                    <a href="https://github.com/cheng-alain" target="_blank" class="contact-link">
+                        <span class="contact-icon">🐙</span>
+                        GitHub : /cheng-alain
                     </a>
                 </div>
             </div>
