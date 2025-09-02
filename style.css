@@ -301,6 +301,9 @@ html {
     flex-grow: 1;
     overflow: hidden;
     display: -webkit-box;
+    /* Standard property first for better compatibility */
+    line-clamp: 4;
+    /* Webkit fallback for older browsers */
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
