@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Setup Automation - Alain Cheng DevOps Portfolio</title>
+    <meta name="description" content="Automatisation complète de l'installation d'un environnement Windows avec PowerShell et Ansible - Projet par Alain Cheng, DevOps Engineer">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <!-- Navigation Header -->
+    <nav class="project-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="back-btn">
+                    ← Retour Portfolio
+                </a>
+                <div class="project-nav-links">
+                    <a href="#overview" class="nav-link">Vue d'ensemble</a>
+                    <a href="#architecture" class="nav-link">Architecture</a>
+                    <a href="#technologies" class="nav-link">Technologies</a>
+                    <a href="#results" class="nav-link">Résultats</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Projet -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-status-badge">
+                    <span class="status-dot"></span>
+                    Automatisation complète
+                </div>
+                
+                <h1 class="project-hero-title">Windows Setup Automation</h1>
+                
+                <p class="project-hero-description">
+                    Solution complète d'automatisation pour configurer un environnement de développement Windows complet en quelques minutes. Plus jamais perdre de temps lors d'un reset système ou d'un nouvel ordinateur !
+                </p>
+
+                <div class="project-hero-tech">
+                    <span class="tech-badge">Ansible</span>
+                    <span class="tech-badge">PowerShell</span>
+                    <span class="tech-badge">WSL2</span>
+                    <span class="tech-badge">Winget</span>
+                    <span class="tech-badge">Ubuntu</span>
+                </div>
+
+                <div class="project-hero-actions">
+                    <a href="https://github.com/cheng-alain/windows_setup" class="btn-primary" target="_blank">
+                        🔗 Voir sur GitHub
+                    </a>
+                    <a href="#architecture" class="btn-secondary">
+                        🚀 Voir l'Architecture
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-hero-visual">
+                <div class="project-hero-image">
+                    <div class="image-placeholder">
+                        <span>⚙️ Workflow d'Automatisation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Vue d'ensemble -->
+    <section id="overview" class="project-section">
+        <div class="container">
+            <h2 class="section-title">Vue d'ensemble</h2>
+            
+            <div class="project-content-grid">
+                <div class="content-main">
+                    <div class="content-block">
+                        <h3>Contexte</h3>
+                        <div class="content-text">
+                            <p>Chaque reset de Windows ou achat d'un nouvel ordinateur représentait plusieurs heures de configuration manuelle fastidieuse : téléchargement d'applications, installation des outils de développement, configuration de WSL2, setup des environnements Docker et Kubernetes...</p>
+                            <p>Cette perte de temps récurrente m'a motivé à créer une solution d'automatisation complète basée sur l'Infrastructure as Code pour résoudre définitivement ce problème.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>Objectifs</h3>
+                        <div class="content-text">
+                            <ul>
+                                <li>🚀 <strong>Automatisation totale</strong> : De zéro à environnement DevOps complet en moins de 30 minutes</li>
+                                <li>🔧 <strong>Reproductibilité</strong> : Configuration identique sur n'importe quelle machine Windows</li>
+                                <li>📦 <strong>Modularité</strong> : Rôles Ansible indépendants pour chaque composant</li>
+                                <li>⚡ <strong>Efficacité</strong> : Bootstrap rapide puis configuration fine automatisée</li>
+                                <li>🔄 <strong>Évolutivité</strong> : Facilité d'ajout de nouveaux outils ou configurations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>Défis Techniques</h3>
+                        <div class="content-text">
+                            <ul>
+                                <li><strong>Hybridation Windows/Linux</strong> : Orchestrer PowerShell et Ansible entre Windows et WSL2</li>
+                                <li><strong>Gestion des redémarrages</strong> : WSL2 nécessite un redémarrage système pour activation</li>
+                                <li><strong>Versions dynamiques</strong> : Récupération automatique des dernières versions via APIs officielles</li>
+                                <li><strong>Configuration Docker WSL2</strong> : Optimisation pour l'environnement containerisé</li>
+                                <li><strong>Permissions et sécurité</strong> : Gestion des élévations de privilèges nécessaires</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="info-card">
+                        <h4>📅 Timeline</h4>
+                        <div class="content-text">
+                            <p>Durée : 2 semaines</p>
+                            <p>Développement : Mars 2024</p>
+                            <p>Statut : Production active</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>👥 Projet</h4>
+                        <div class="content-text">
+                            <p>Type : Projet personnel</p>
+                            <p>Rôle : DevOps Engineer</p>
+                            <p>Contexte : Automatisation workflow</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>📊 Impact</h4>
+                        <div class="content-text">
+                            <p>⏱️ Temps économisé : 4h → 30min</p>
+                            <p>🔄 Reproductibilité : 100%</p>
+                            <p>⚡ Gain efficacité : 87%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Architecture -->
+    <section id="architecture" class="project-section">
+        <div class="container">
+            <h2 class="section-title">Architecture</h2>
+            
+            <div class="architecture-content">
+                <div class="content-block">
+                    <h3>Architecture en 2 Phases</h3>
+                    <div class="content-text">
+                        <p><strong>Phase 1 - Bootstrap PowerShell</strong> : Installation rapide des composants de base Windows avec des privilèges élevés. Activation WSL2, installation applications essentielles via winget, préparation de l'environnement Linux.</p>
+                        
+                        <p><strong>Phase 2 - Configuration Ansible</strong> : Une fois WSL2 opérationnel, déploiement des rôles Ansible modulaires pour configurer finement l'environnement de développement dans l'écosystème Linux.</p>
+                        
+                        <div class="diagram-placeholder">
+                            <span>🏗️ Flux d'Automatisation Windows → WSL2 → Stack DevOps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3>Infrastructure & Composants</h3>
+                    <div class="content-text">
+                        <p><strong>Couche Windows</strong> : PowerShell avec winget pour l'installation native des applications (Docker Desktop, VSCode, Git, navigateurs). Activation des fonctionnalités WSL2 et virtualisation.</p>
+                        
+                        <p><strong>Couche WSL2/Ubuntu</strong> : Distribution Ubuntu 24.04 LTS avec stack complète DevOps orchestrée par Ansible. Chaque rôle gère un composant spécifique avec ses dépendances.</p>
+                        
+                        <p><strong>Intégration hybride</strong> : Configuration Docker optimisée pour WSL2, variables d'environnement partagées, intégration VSCode Remote-WSL pour un workflow transparent.</p>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3>Sécurité & Bonnes Pratiques</h3>
+                    <div class="content-text">
+                        <ul>
+                            <li><strong>Élévation de privilèges contrôlée</strong> : Vérifications Administrator uniquement quand nécessaire</li>
+                            <li><strong>Sources officielles</strong> : Téléchargements exclusivement depuis repositories officiels</li>
+                            <li><strong>Vérifications d'intégrité</strong> : Validation des installations et configurations</li>
+                            <li><strong>Isolation des environnements</strong> : Séparation claire Windows/WSL2 pour la sécurité</li>
+                            <li><strong>Gestion des erreurs</strong> : Rollback et nettoyage automatique en cas d'échec</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Technologies -->
+    <section id="technologies" class="project-section">
+        <div class="container">
+            <h2 class="section-title">Technologies</h2>
+            
+            <div class="tech-content">
+                <div class="content-block">
+                    <h3>Stack Technique Complète</h3>
+                    <div class="content-text">
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h4>🖥️ Orchestration Windows</h4>
+                                <ul>
+                                    <li><strong>PowerShell 7+</strong> : Scripts d'automatisation et gestion privilèges</li>
+                                    <li><strong>Winget</strong> : Gestionnaire de paquets Microsoft pour applications</li>
+                                    <li><strong>WSL2</strong> : Sous-système Linux pour environnement hybride</li>
+                                    <li><strong>DISM</strong> : Activation fonctionnalités Windows (virtualisation)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>🐧 Automatisation Linux</h4>
+                                <ul>
+                                    <li><strong>Ansible</strong> : Configuration management avec rôles modulaires</li>
+                                    <li><strong>Ubuntu 24.04 LTS</strong> : Distribution Linux stable et supportée</li>
+                                    <li><strong>APT</strong> : Gestion paquets système Linux</li>
+                                    <li><strong>Systemd</strong> : Gestion services et daemons</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h4>⚙️ Stack DevOps Installée</h4>
+                                <ul>
+                                    <li><strong>Docker + Compose</strong> : Containerisation avec config WSL2 optimisée</li>
+                                    <li><strong>Kubernetes</strong> : kubectl + Helm dernières versions</li>
+                                    <li><strong>Go 1.21+</strong> : Environnement complet avec outils développement</li>
+                                    <li><strong>OpenLens</strong> : Interface graphique Kubernetes</li>
+                                    <li><strong>VSCode</strong> : Extensions DevOps pré-configurées</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3>Justifications Techniques</h3>
+                    <div class="content-text">
+                        <p><strong>Approche hybride PowerShell + Ansible</strong> : PowerShell excelle pour Windows natif mais Ansible apporte sa puissance de configuration management pour Linux. Cette combinaison offre le meilleur des deux mondes.</p>
+                        
+                        <p><strong>Rôles Ansible modulaires</strong> : Chaque composant (Docker, Go, Kubernetes) est un rôle indépendant avec ses defaults, handlers et tasks. Facilite la maintenance et permet la réutilisation.</p>
+                        
+                        <p><strong>APIs officielles pour versions</strong> : Récupération dynamique des dernières versions stables via GitHub API et endpoints officiels. Garantit des installations toujours à jour.</p>
+                        
+                        <p><strong>WSL2 over VM</strong> : Intégration native Windows, performances supérieures, partage filesystem transparent. Parfait pour un environnement de développement hybride.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Résultats -->
+    <section id="results" class="project-section">
+        <div class="container">
+            <h2 class="section-title">Résultats & Impact</h2>
+            
+            <div class="results-content">
+                <div class="content-block">
+                    <h3>Métriques de Performance</h3>
+                    <div class="content-text">
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-value">30min</div>
+                                <div class="metric-label">Temps setup complet</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">6 rôles</div>
+                                <div class="metric-label">Composants automatisés</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">87%</div>
+                                <div class="metric-label">Gain d'efficacité</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">15+</div>
+                                <div class="metric-label">Applications installées</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Reproductibilité</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">0</div>
+                                <div class="metric-label">Intervention manuelle</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3>Impact & Bénéfices</h3>
+                    <div class="content-text">
+                        <p><strong>Productivité développeur</strong> : Passage de 4 heures de configuration manuelle à 30 minutes d'automatisation. Le temps économisé peut être investi dans des tâches à valeur ajoutée.</p>
+                        
+                        <p><strong>Standardisation</strong> : Environnement de développement identique et reproductible sur toutes les machines. Élimination des problèmes "ça marche sur ma machine".</p>
+                        
+                        <p><strong>Onboarding équipe</strong> : Nouveau développeur opérationnel immédiatement avec un environnement pré-configuré aux standards de l'équipe.</p>
+                        
+                        <p><strong>Évolutivité</strong> : Ajout facile de nouveaux outils via création de nouveaux rôles Ansible. Architecture modulaire qui s'adapte aux besoins futurs.</p>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3>Apprentissages Clés</h3>
+                    <div class="content-text">
+                        <ul>
+                            <li><strong>Automatisation hybride</strong> : Orchestration efficace entre écosystèmes Windows et Linux pour maximiser les forces de chaque plateforme</li>
+                            <li><strong>Infrastructure as Code</strong> : Application des principes IaC au poste de travail développeur pour garantir reproductibilité et versioning</li>
+                            <li><strong>APIs et récupération dynamique</strong> : Intégration d'APIs officielles pour maintenir automatiquement les versions à jour</li>
+                            <li><strong>Architecture modulaire</strong> : Conception de rôles Ansible réutilisables et maintenables pour faciliter l'évolution</li>
+                            <li><strong>Gestion d'états complexes</strong> : Orchestration de redémarrages système et gestion de dépendances inter-composants</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation entre projets -->
+    <section class="project-navigation">
+        <div class="container">
+            <div class="project-nav-arrows">
+                <a href="portfolio-cli.html" class="nav-arrow prev-project">
+                    <span class="arrow">←</span>
+                    <div class="project-info">
+                        <span class="nav-label">Projet précédent</span>
+                        <span class="project-title">Portfolio CLI Terminal</span>
+                    </div>
+                </a>
+                
+                <a href="audioprothese-plus.html" class="nav-arrow next-project">
+                    <div class="project-info">
+                        <span class="nav-label">Projet suivant</span>
+                        <span class="project-title">AudioProthèse+ Infrastructure</span>
+                    </div>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer actions -->
+    <footer class="project-footer">
+        <div class="container">
+            <div class="footer-actions">
+                <a href="../index.html" class="btn-outline">← Retour au Portfolio</a>
+                <div class="project-links">
+                    <a href="https://github.com/cheng-alain/windows_setup" class="btn-primary" target="_blank">
+                        Voir sur GitHub
+                    </a>
+                    <a href="../index.html#contact" class="btn-secondary">
+                        Me Contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/project-detail.js"></script>
+</body>
+</html>
