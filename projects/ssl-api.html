@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API rest - Alain Cheng DevOps Portfolio</title>
-    <meta name="description" content="[DESCRIPTION_PROJET] - Détails du projet par Alain Cheng, DevOps Engineer">
+    <title>API Certificats SSL/TLS - Alain Cheng DevOps Portfolio</title>
+    <meta name="description" content="API REST complète de gestion de certificats SSL/TLS avec pipeline CI/CD et déploiement AWS ECS - Détails du projet par Alain Cheng, DevOps Engineer">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/project-detail.css">
 </head>
 <body>
     <div class="bg-animation"></div>
-
     <!-- Navigation Header -->
     <nav class="project-nav">
         <div class="container">
@@ -27,39 +26,37 @@
             </div>
         </div>
     </nav>
-
     <!-- Hero Section Projet -->
     <section class="project-hero">
         <div class="container">
             <div class="project-hero-content">
                 <div class="project-status-badge">
                     <span class="status-dot"></span>
-                    [STATUT_PROJET]
+                    Déployé en production
                 </div>
                 
-                <h1 class="project-hero-title">[TITRE_PROJET]</h1>
+                <h1 class="project-hero-title">API de Gestion de Certificats SSL/TLS</h1>
                 
                 <p class="project-hero-description">
-                    [DESCRIPTION_COURTE_PROJET]
+                    Solution complète de gestion du cycle de vie des certificats avec API REST sécurisée, 
+                    authentification PocketBase, chiffrement AES-256-GCM et déploiement automatisé via 
+                    GitLab CI/CD sur AWS ECS Fargate. Notifications automatiques d'expiration incluses.
                 </p>
-
                 <div class="project-hero-tech">
                     <!-- Technologies principales -->
-                    <span class="tech-badge">[TECH_1]</span>
-                    <span class="tech-badge">[TECH_2]</span>
-                    <span class="tech-badge">[TECH_3]</span>
+                    <span class="tech-badge">Golang</span>
+                    <span class="tech-badge">Echo</span>
+                    <span class="tech-badge">PocketBase</span>
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">GitLab CI</span>
+                    <span class="tech-badge">AWS ECS</span>
                 </div>
-
                 <div class="project-hero-actions">
-                    <a href="[GITHUB_URL]" class="btn-primary" target="_blank">
-                        🔗 Voir sur GitHub
-                    </a>
-                    <a href="[DEMO_URL]" class="btn-secondary" target="_blank">
-                        🚀 Démo Live
+                    <a href="https://gitlab.com/alain-jordan/golang-projet_detude" class="btn-primary" target="_blank">
+                        🔗 Voir sur GitLab
                     </a>
                 </div>
             </div>
-
             <div class="project-hero-visual">
                 <div class="project-hero-image">
                     <!-- Placeholder pour image/diagramme principal -->
@@ -70,7 +67,6 @@
             </div>
         </div>
     </section>
-
     <!-- Section Vue d'ensemble -->
     <section id="overview" class="project-section">
         <div class="container">
@@ -81,50 +77,55 @@
                     <div class="content-block">
                         <h3>Contexte</h3>
                         <div class="content-placeholder">
-                            <!-- À compléter : Contexte du projet -->
-                            <p class="placeholder-text">Décrivez ici le contexte qui a mené à ce projet...</p>
+                            <p>Projet d'études M1 visant à développer une solution interne pour l'entreprise fictive "Solution Libre" qui nécessitait une API robuste pour gérer ses certificats SSL/TLS. L'objectif était de centraliser la gestion des certificats pour tous les services internes et externes de l'entreprise, en respectant les normes de sécurité RGPD et les bonnes pratiques de l'ANSSI.</p>
                         </div>
                     </div>
-
                     <div class="content-block">
                         <h3>Objectifs</h3>
                         <div class="content-placeholder">
-                            <!-- À compléter : Objectifs du projet -->
-                            <p class="placeholder-text">Listez les objectifs principaux à atteindre...</p>
+                            <ul>
+                                <li>Développer une API REST complète en Go pour la gestion de certificats</li>
+                                <li>Implémenter un système d'authentification sécurisé avec PocketBase</li>
+                                <li>Mettre en place une chaîne CI/CD automatisée avec GitLab</li>
+                                <li>Déployer l'application sur AWS ECS Fargate</li>
+                                <li>Assurer la conformité RGPD et la sécurité des données</li>
+                                <li>Créer un système de notifications automatiques pour les expirations</li>
+                            </ul>
                         </div>
                     </div>
-
                     <div class="content-block">
                         <h3>Défis Techniques</h3>
                         <div class="content-placeholder">
-                            <!-- À compléter : Défis rencontrés -->
-                            <p class="placeholder-text">Décrivez les principaux défis techniques...</p>
+                            <ul>
+                                <li>Intégration sécurisée entre GitLab Registry et AWS ECS</li>
+                                <li>Gestion des secrets et variables d'environnement entre GitLab et AWS</li>
+                                <li>Chiffrement AES-256-GCM des certificats avant stockage</li>
+                                <li>Architecture microservices avec communication API sécurisée</li>
+                                <li>Mise en place de tâches cron pour monitoring des expirations</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
                 <div class="content-sidebar">
                     <div class="info-card">
                         <h4>📅 Timeline</h4>
                         <div class="content-placeholder">
-                            <p class="placeholder-text">Durée : [DUREE]</p>
-                            <p class="placeholder-text">Début : [DATE_DEBUT]</p>
-                            <p class="placeholder-text">Fin : [DATE_FIN]</p>
+                            <p>Durée : 3 mois</p>
+                            <p>Début : Septembre 2024</p>
+                            <p>Fin : Novembre 2024</p>
                         </div>
                     </div>
-
                     <div class="info-card">
                         <h4>👥 Équipe</h4>
                         <div class="content-placeholder">
-                            <p class="placeholder-text">Rôle : [VOTRE_ROLE]</p>
-                            <p class="placeholder-text">Équipe : [TAILLE_EQUIPE]</p>
+                            <p>Rôle : Développeur DevOps Full-Stack</p>
+                            <p>Équipe : Projet individuel</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Section Architecture -->
     <section id="architecture" class="project-section">
         <div class="container">
@@ -134,8 +135,12 @@
                 <div class="content-block">
                     <h3>Architecture Générale</h3>
                     <div class="content-placeholder">
-                        <!-- À compléter : Description architecture -->
-                        <p class="placeholder-text">Décrivez l'architecture générale du système...</p>
+                        <p>Architecture microservices déployée sur AWS ECS Fargate avec deux conteneurs principaux :</p>
+                        <ul>
+                            <li><strong>API Echo (Golang)</strong> : Service principal exposant l'API REST</li>
+                            <li><strong>PocketBase</strong> : Service d'authentification et base de données</li>
+                        </ul>
+                        <p>Communication sécurisée via réseau privé AWS avec Load Balancer pour exposition publique. Chaque service dispose de son propre Load Balancer pour un DNS stable.</p>
                         
                         <!-- Placeholder pour diagramme -->
                         <div class="diagram-placeholder">
@@ -143,26 +148,33 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="content-block">
                     <h3>Infrastructure</h3>
                     <div class="content-placeholder">
-                        <!-- À compléter : Détails infrastructure -->
-                        <p class="placeholder-text">Détails des composants d'infrastructure...</p>
+                        <ul>
+                            <li><strong>AWS ECS Fargate</strong> : Orchestration des conteneurs serverless</li>
+                            <li><strong>Application Load Balancer</strong> : Répartition de charge et DNS</li>
+                            <li><strong>AWS Secrets Manager</strong> : Gestion sécurisée des tokens GitLab</li>
+                            <li><strong>GitLab Container Registry</strong> : Stockage privé des images Docker</li>
+                            <li><strong>Security Groups</strong> : Contrôle d'accès réseau granulaire</li>
+                        </ul>
                     </div>
                 </div>
-
                 <div class="content-block">
                     <h3>Sécurité</h3>
                     <div class="content-placeholder">
-                        <!-- À compléter : Mesures de sécurité -->
-                        <p class="placeholder-text">Mesures de sécurité implémentées...</p>
+                        <ul>
+                            <li><strong>Chiffrement AES-256-GCM</strong> : Certificats chiffrés avant stockage</li>
+                            <li><strong>Authentification JWT</strong> : Tokens sécurisés via PocketBase</li>
+                            <li><strong>Variables d'environnement</strong> : Secrets gérés via AWS et GitLab</li>
+                            <li><strong>HTTPS only</strong> : Communications chiffrées end-to-end</li>
+                            <li><strong>Conformité RGPD</strong> : Respect des normes de protection des données</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Section Technologies -->
     <section id="technologies" class="project-section">
         <div class="container">
@@ -172,37 +184,55 @@
                 <div class="content-block">
                     <h3>Stack Technique</h3>
                     <div class="content-placeholder">
-                        <!-- À compléter : Stack complète -->
                         <div class="tech-categories">
                             <div class="tech-category">
                                 <h4>Backend</h4>
-                                <p class="placeholder-text">Technologies backend utilisées...</p>
+                                <ul>
+                                    <li><strong>Go (Golang)</strong> : Langage principal pour l'API</li>
+                                    <li><strong>Echo Framework</strong> : Framework web haute performance</li>
+                                    <li><strong>PocketBase</strong> : Base de données et authentification</li>
+                                    <li><strong>Crypto/x509</strong> : Gestion native des certificats</li>
+                                    <li><strong>Cron</strong> : Tâches planifiées pour monitoring</li>
+                                </ul>
                             </div>
                             
                             <div class="tech-category">
                                 <h4>Infrastructure</h4>
-                                <p class="placeholder-text">Outils d'infrastructure...</p>
+                                <ul>
+                                    <li><strong>Docker</strong> : Conteneurisation des applications</li>
+                                    <li><strong>AWS ECS Fargate</strong> : Orchestration serverless</li>
+                                    <li><strong>AWS Load Balancer</strong> : Répartition de charge</li>
+                                    <li><strong>AWS Secrets Manager</strong> : Gestion des secrets</li>
+                                </ul>
                             </div>
                             
                             <div class="tech-category">
                                 <h4>DevOps</h4>
-                                <p class="placeholder-text">Outils DevOps utilisés...</p>
+                                <ul>
+                                    <li><strong>GitLab CI/CD</strong> : Pipeline d'intégration continue</li>
+                                    <li><strong>GitLab Registry</strong> : Registry privée Docker</li>
+                                    <li><strong>AWS CLI</strong> : Déploiement automatisé</li>
+                                    <li><strong>Python</strong> : Scripts d'automatisation CI/CD</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="content-block">
                     <h3>Justifications Techniques</h3>
                     <div class="content-placeholder">
-                        <!-- À compléter : Pourquoi ces choix -->
-                        <p class="placeholder-text">Expliquez vos choix technologiques...</p>
+                        <ul>
+                            <li><strong>Go + Echo</strong> : Performance élevée et simplicité pour API REST</li>
+                            <li><strong>PocketBase</strong> : Solution tout-en-un pour auth et DB, simple à déployer</li>
+                            <li><strong>AWS ECS Fargate</strong> : Pas de gestion serveur, scaling automatique</li>
+                            <li><strong>GitLab CI/CD</strong> : Intégration native avec registry et simplicité</li>
+                            <li><strong>AES-256-GCM</strong> : Standard de chiffrement robuste pour les certificats</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Section Résultats -->
     <section id="results" class="project-section">
         <div class="container">
@@ -210,76 +240,54 @@
             
             <div class="results-content">
                 <div class="content-block">
-                    <h3>Métriques de Performance</h3>
+                    <h3>Fonctionnalités Livrées</h3>
                     <div class="content-placeholder">
-                        <!-- À compléter : Métriques -->
-                        <div class="metrics-grid">
-                            <div class="metric-card">
-                                <div class="metric-value">[VALEUR_1]</div>
-                                <div class="metric-label">[METRIQUE_1]</div>
-                            </div>
-                            <div class="metric-card">
-                                <div class="metric-value">[VALEUR_2]</div>
-                                <div class="metric-label">[METRIQUE_2]</div>
-                            </div>
-                            <div class="metric-card">
-                                <div class="metric-value">[VALEUR_3]</div>
-                                <div class="metric-label">[METRIQUE_3]</div>
-                            </div>
-                        </div>
+                        <ul>
+                            <li>API REST complète avec 20+ endpoints</li>
+                            <li>Support certificats CA, serveur et client</li>
+                            <li>Génération avec algorithmes RSA et ECDSA</li>
+                            <li>Vérification, renouvellement et révocation</li>
+                            <li>Notifications automatiques d'expiration</li>
+                            <li>Interface d'administration complète</li>
+                            <li>Déploiement automatisé via CI/CD</li>
+                        </ul>
                     </div>
                 </div>
-
                 <div class="content-block">
                     <h3>Impact & Bénéfices</h3>
                     <div class="content-placeholder">
-                        <!-- À compléter : Impact du projet -->
-                        <p class="placeholder-text">Décrivez l'impact et les bénéfices apportés...</p>
+                        <ul>
+                            <li><strong>Sécurité renforcée</strong> : Centralisation et chiffrement des certificats</li>
+                            <li><strong>Automatisation</strong> : Réduction manuelle des tâches de gestion</li>
+                            <li><strong>Conformité</strong> : Respect des normes RGPD et ANSSI</li>
+                            <li><strong>Scalabilité</strong> : Architecture cloud-native évolutive</li>
+                            <li><strong>Monitoring proactif</strong> : Prévention des expirations</li>
+                        </ul>
                     </div>
                 </div>
-
                 <div class="content-block">
                     <h3>Apprentissages</h3>
                     <div class="content-placeholder">
-                        <!-- À compléter : Ce que vous avez appris -->
-                        <p class="placeholder-text">Partagez vos apprentissages clés...</p>
+                        <ul>
+                            <li>Maîtrise de l'écosystème Go pour API REST haute performance</li>
+                            <li>Intégration complexe GitLab CI/CD avec AWS ECS</li>
+                            <li>Gestion sécurisée des secrets en environnement cloud</li>
+                            <li>Architecture microservices et communication inter-services</li>
+                            <li>Importance des tests et documentation dans un projet DevOps</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Navigation entre projets -->
-    <section class="project-navigation">
-        <div class="container">
-            <div class="project-nav-arrows">
-                <a href="[PREV_PROJECT].html" class="nav-arrow prev-project">
-                    <span class="arrow">←</span>
-                    <div class="project-info">
-                        <span class="nav-label">Projet précédent</span>
-                        <span class="project-title">[PREV_PROJECT_TITLE]</span>
-                    </div>
-                </a>
-                
-                <a href="[NEXT_PROJECT].html" class="nav-arrow next-project">
-                    <div class="project-info">
-                        <span class="nav-label">Projet suivant</span>
-                        <span class="project-title">[NEXT_PROJECT_TITLE]</span>
-                    </div>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer actions -->
     <footer class="project-footer">
         <div class="container">
             <div class="footer-actions">
                 <a href="../index.html" class="btn-outline">← Retour au Portfolio</a>
                 <div class="project-links">
-                    <a href="[GITHUB_URL]" class="btn-primary" target="_blank">
-                        Voir sur GitHub
+                    <a href="https://gitlab.com/alain-jordan/golang-projet_detude" class="btn-primary" target="_blank">
+                        Voir sur GitLab
                     </a>
                     <a href="../index.html#contact" class="btn-secondary">
                         Me Contacter
@@ -288,7 +296,6 @@
             </div>
         </div>
     </footer>
-
     <script src="../js/project-detail.js"></script>
 </body>
 </html>

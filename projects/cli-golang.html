@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mamba CLI - Alain Cheng DevOps Portfolio</title>
-    <meta name="description" content="[DESCRIPTION_PROJET] - Détails du projet par Alain Cheng, DevOps Engineer">
+    <meta name="description" content="Interface CLI d'authentification en Golang avec PocketBase - Détails du projet par Alain Cheng, DevOps Engineer">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/project-detail.css">
 </head>
@@ -34,28 +34,29 @@
             <div class="project-hero-content">
                 <div class="project-status-badge">
                     <span class="status-dot"></span>
-                    [STATUT_PROJET]
+                    Projet d'études M1
                 </div>
                 
-                <h1 class="project-hero-title">[TITRE_PROJET]</h1>
+                <h1 class="project-hero-title">Mamba CLI - Interface d'Authentification</h1>
                 
                 <p class="project-hero-description">
-                    [DESCRIPTION_COURTE_PROJET]
+                    Interface en ligne de commande développée en Go pour l'intégration de solutions d'authentification modernes avec PocketBase. Gestion complète des utilisateurs, permissions et tokens JWT avec une architecture robuste et sécurisée.
                 </p>
 
                 <div class="project-hero-tech">
-                    <!-- Technologies principales -->
-                    <span class="tech-badge">[TECH_1]</span>
-                    <span class="tech-badge">[TECH_2]</span>
-                    <span class="tech-badge">[TECH_3]</span>
+                    <span class="tech-badge">Golang</span>
+                    <span class="tech-badge">Cobra</span>
+                    <span class="tech-badge">PocketBase</span>
+                    <span class="tech-badge">JWT</span>
+                    <span class="tech-badge">Docker</span>
                 </div>
 
                 <div class="project-hero-actions">
-                    <a href="[GITHUB_URL]" class="btn-primary" target="_blank">
-                        🔗 Voir sur GitHub
+                    <a href="https://gitlab.com/alain-jordan/golang-dm" class="btn-primary" target="_blank">
+                        🔗 Voir sur GitLab
                     </a>
-                    <a href="[DEMO_URL]" class="btn-secondary" target="_blank">
-                        🚀 Démo Live
+                    <a href="#overview" class="btn-secondary">
+                        📖 Documentation
                     </a>
                 </div>
             </div>
@@ -64,7 +65,7 @@
                 <div class="project-hero-image">
                     <!-- Placeholder pour image/diagramme principal -->
                     <div class="image-placeholder">
-                        <span>📊 Schéma Architecture</span>
+                        <span>📊 Architecture CLI Mamba</span>
                     </div>
                 </div>
             </div>
@@ -80,45 +81,56 @@
                 <div class="content-main">
                     <div class="content-block">
                         <h3>Contexte</h3>
-                        <div class="content-placeholder">
-                            <!-- À compléter : Contexte du projet -->
-                            <p class="placeholder-text">Décrivez ici le contexte qui a mené à ce projet...</p>
-                        </div>
+                        <p>Ce projet a été réalisé dans le cadre du devoir maison Golang M1-DO-B. L'objectif était de concevoir et implémenter une Interface en Ligne de Commande (CLI) en Go interagissant avec une solution d'authentification moderne pour gérer les utilisateurs, permissions et authentification de manière sécurisée.</p>
+                        <p>Face au besoin croissant d'outils DevOps permettant la gestion centralisée des identités et des accès, ce projet répond à la problématique de l'automatisation des processus d'authentification dans les environnements cloud-native.</p>
                     </div>
 
                     <div class="content-block">
                         <h3>Objectifs</h3>
-                        <div class="content-placeholder">
-                            <!-- À compléter : Objectifs du projet -->
-                            <p class="placeholder-text">Listez les objectifs principaux à atteindre...</p>
-                        </div>
+                        <ul>
+                            <li><strong>Création d'utilisateurs et d'administrateurs</strong> avec gestion des rôles</li>
+                            <li><strong>Système d'authentification sécurisé</strong> avec tokens JWT</li>
+                            <li><strong>Gestion granulaire des permissions</strong> (CRUD, consultation, recherche)</li>
+                            <li><strong>Interface CLI intuitive</strong> avec framework Cobra</li>
+                            <li><strong>Architecture scalable</strong> avec containerisation Docker</li>
+                            <li><strong>Intégration API REST</strong> avec PocketBase comme backend</li>
+                        </ul>
                     </div>
 
                     <div class="content-block">
                         <h3>Défis Techniques</h3>
-                        <div class="content-placeholder">
-                            <!-- À compléter : Défis rencontrés -->
-                            <p class="placeholder-text">Décrivez les principaux défis techniques...</p>
-                        </div>
+                        <ul>
+                            <li><strong>Gestion sécurisée des tokens</strong> : Implémentation d'un système de stockage et rotation des JWT</li>
+                            <li><strong>Architecture de permissions</strong> : Conception d'un modèle de rôles flexible (super_user, user)</li>
+                            <li><strong>Validation et sécurité</strong> : Gestion des erreurs et validation des entrées utilisateur</li>
+                            <li><strong>Interface utilisateur CLI</strong> : Création d'une expérience utilisateur fluide avec Cobra</li>
+                            <li><strong>Containerisation complète</strong> : Déploiement multi-services avec Docker Compose</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="content-sidebar">
                     <div class="info-card">
                         <h4>📅 Timeline</h4>
-                        <div class="content-placeholder">
-                            <p class="placeholder-text">Durée : [DUREE]</p>
-                            <p class="placeholder-text">Début : [DATE_DEBUT]</p>
-                            <p class="placeholder-text">Fin : [DATE_FIN]</p>
-                        </div>
+                        <p>Durée : 3 semaines</p>
+                        <p>Début : Septembre 2024</p>
+                        <p>Fin : Octobre 2024</p>
                     </div>
 
                     <div class="info-card">
                         <h4>👥 Équipe</h4>
-                        <div class="content-placeholder">
-                            <p class="placeholder-text">Rôle : [VOTRE_ROLE]</p>
-                            <p class="placeholder-text">Équipe : [TAILLE_EQUIPE]</p>
-                        </div>
+                        <p>Rôle : Développeur principal</p>
+                        <p>Équipe : Projet individuel</p>
+                        <p>Encadrement : Cursus M1 DevOps</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>🎯 Compétences</h4>
+                        <p>• Programmation Golang</p>
+                        <p>• Architecture API REST</p>
+                        <p>• Sécurité & JWT</p>
+                        <p>• Containerisation Docker</p>
+                        <p>• Design CLI/UX</p>
                     </div>
                 </div>
             </div>
@@ -133,31 +145,50 @@
             <div class="architecture-content">
                 <div class="content-block">
                     <h3>Architecture Générale</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Description architecture -->
-                        <p class="placeholder-text">Décrivez l'architecture générale du système...</p>
-                        
-                        <!-- Placeholder pour diagramme -->
-                        <div class="diagram-placeholder">
-                            <span>🏗️ Diagramme d'Architecture</span>
-                        </div>
+                    <p>L'architecture de Mamba CLI repose sur une séparation claire entre le client CLI et le backend d'authentification. Le CLI développé en Go utilise le framework Cobra pour une interface utilisateur optimale, tandis que PocketBase fournit les services d'authentification et de gestion des données.</p>
+                    
+                    <!-- Placeholder pour diagramme -->
+                    <div class="diagram-placeholder">
+                        <span>🏗️ Diagramme d'Architecture CLI → API → Database</span>
                     </div>
+
+                    <p>Le système implémente une architecture en couches :</p>
+                    <ul>
+                        <li><strong>Couche Présentation</strong> : Interface CLI avec commandes Cobra</li>
+                        <li><strong>Couche Business</strong> : Logique métier de gestion des utilisateurs et permissions</li>
+                        <li><strong>Couche API</strong> : Communication REST avec PocketBase</li>
+                        <li><strong>Couche Données</strong> : Base de données SQLite via PocketBase</li>
+                    </ul>
                 </div>
 
                 <div class="content-block">
                     <h3>Infrastructure</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Détails infrastructure -->
-                        <p class="placeholder-text">Détails des composants d'infrastructure...</p>
-                    </div>
+                    <p><strong>Containerisation multi-services :</strong></p>
+                    <ul>
+                        <li><strong>mamba-cli</strong> : Conteneur principal avec l'exécutable Go</li>
+                        <li><strong>pocketbase</strong> : Service d'authentification et base de données</li>
+                        <li><strong>Volumes persistants</strong> : Stockage des données utilisateur</li>
+                        <li><strong>Réseau interne</strong> : Communication sécurisée entre services</li>
+                    </ul>
+
+                    <p><strong>Modèle de données :</strong></p>
+                    <ul>
+                        <li><strong>Table users</strong> : Informations utilisateur avec relation vers rôles</li>
+                        <li><strong>Table roles</strong> : Définition des rôles (super_user, user)</li>
+                        <li><strong>Table permissions</strong> : Permissions granulaires (CRUD + consultation)</li>
+                    </ul>
                 </div>
 
                 <div class="content-block">
                     <h3>Sécurité</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Mesures de sécurité -->
-                        <p class="placeholder-text">Mesures de sécurité implémentées...</p>
-                    </div>
+                    <ul>
+                        <li><strong>Authentification JWT</strong> : Tokens sécurisés avec expiration</li>
+                        <li><strong>Chiffrement des mots de passe</strong> : Hachage sécurisé via PocketBase</li>
+                        <li><strong>Validation des entrées</strong> : Contrôles stricts côté CLI et API</li>
+                        <li><strong>Gestion des permissions</strong> : Contrôle d'accès basé sur les rôles (RBAC)</li>
+                        <li><strong>Reset sécurisé</strong> : Processus de réinitialisation par email avec tokens temporaires</li>
+                        <li><strong>Isolation réseau</strong> : Communication interne via Docker networks</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -171,33 +202,40 @@
             <div class="tech-content">
                 <div class="content-block">
                     <h3>Stack Technique</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Stack complète -->
-                        <div class="tech-categories">
-                            <div class="tech-category">
-                                <h4>Backend</h4>
-                                <p class="placeholder-text">Technologies backend utilisées...</p>
-                            </div>
-                            
-                            <div class="tech-category">
-                                <h4>Infrastructure</h4>
-                                <p class="placeholder-text">Outils d'infrastructure...</p>
-                            </div>
-                            
-                            <div class="tech-category">
-                                <h4>DevOps</h4>
-                                <p class="placeholder-text">Outils DevOps utilisés...</p>
-                            </div>
+                    <div class="tech-categories">
+                        <div class="tech-category">
+                            <h4>Backend & CLI</h4>
+                            <p><strong>Golang</strong> : Langage principal pour performance et simplicité</p>
+                            <p><strong>Cobra</strong> : Framework CLI pour interface utilisateur optimale</p>
+                            <p><strong>PocketBase</strong> : Backend-as-a-Service pour authentification</p>
+                            <p><strong>SQLite</strong> : Base de données embarquée via PocketBase</p>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4>Infrastructure</h4>
+                            <p><strong>Docker</strong> : Containerisation et orchestration</p>
+                            <p><strong>Docker Compose</strong> : Orchestration multi-services</p>
+                            <p><strong>Alpine Linux</strong> : Images légères pour optimisation</p>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4>Sécurité & API</h4>
+                            <p><strong>JWT</strong> : Tokens d'authentification sécurisés</p>
+                            <p><strong>REST API</strong> : Communication standardisée</p>
+                            <p><strong>RBAC</strong> : Contrôle d'accès basé sur les rôles</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="content-block">
                     <h3>Justifications Techniques</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Pourquoi ces choix -->
-                        <p class="placeholder-text">Expliquez vos choix technologiques...</p>
-                    </div>
+                    <p><strong>Golang + Cobra</strong> : Choix optimal pour une CLI performante avec une syntaxe intuitive et une génération automatique de documentation.</p>
+                    
+                    <p><strong>PocketBase</strong> : Solution élégante combinant rapidité de développement, sécurité avancée (cryptage, JWT) et personnalisabilité des permissions. Alternative moderne aux solutions d'authentification complexes.</p>
+                    
+                    <p><strong>Architecture en couches</strong> : Séparation claire des responsabilités permettant maintenabilité, testabilité et évolution future du système.</p>
+                    
+                    <p><strong>Docker multi-stage</strong> : Optimisation des images avec build séparé du runtime, réduisant la surface d'attaque et la taille des conteneurs.</p>
                 </div>
             </div>
         </div>
@@ -210,40 +248,51 @@
             
             <div class="results-content">
                 <div class="content-block">
-                    <h3>Métriques de Performance</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Métriques -->
-                        <div class="metrics-grid">
-                            <div class="metric-card">
-                                <div class="metric-value">[VALEUR_1]</div>
-                                <div class="metric-label">[METRIQUE_1]</div>
-                            </div>
-                            <div class="metric-card">
-                                <div class="metric-value">[VALEUR_2]</div>
-                                <div class="metric-label">[METRIQUE_2]</div>
-                            </div>
-                            <div class="metric-card">
-                                <div class="metric-value">[VALEUR_3]</div>
-                                <div class="metric-label">[METRIQUE_3]</div>
-                            </div>
+                    <h3>Fonctionnalités Implémentées</h3>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-value">25+</div>
+                            <div class="metric-label">Commandes CLI</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">5</div>
+                            <div class="metric-label">Permissions granulaires</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">2</div>
+                            <div class="metric-label">Rôles utilisateur</div>
                         </div>
                     </div>
+
+                    <p><strong>CRUD complet :</strong></p>
+                    <ul>
+                        <li>Gestion des administrateurs (Create, Read, Update, Delete)</li>
+                        <li>Gestion des utilisateurs avec rôles</li>
+                        <li>Gestion des collections et records</li>
+                        <li>Système de réinitialisation de mot de passe par email</li>
+                    </ul>
                 </div>
 
                 <div class="content-block">
                     <h3>Impact & Bénéfices</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Impact du projet -->
-                        <p class="placeholder-text">Décrivez l'impact et les bénéfices apportés...</p>
-                    </div>
+                    <p><strong>Automatisation des processus d'authentification</strong> : Réduction significative du temps de gestion des utilisateurs grâce à l'interface CLI intuitive.</p>
+                    
+                    <p><strong>Sécurité renforcée</strong> : Implémentation de bonnes pratiques de sécurité avec JWT, hachage des mots de passe et contrôle d'accès granulaire.</p>
+                    
+                    <p><strong>Scalabilité</strong> : Architecture containerisée permettant un déploiement facile dans différents environnements.</p>
+                    
+                    <p><strong>Expérience développeur</strong> : Documentation complète et interface CLI auto-générée facilitant l'adoption par d'autres équipes.</p>
                 </div>
 
                 <div class="content-block">
                     <h3>Apprentissages</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Ce que vous avez appris -->
-                        <p class="placeholder-text">Partagez vos apprentissages clés...</p>
-                    </div>
+                    <p><strong>Maîtrise de l'écosystème Go</strong> : Approfondissement des patterns Go et utilisation avancée de Cobra pour des CLI professionnelles.</p>
+                    
+                    <p><strong>Architecture de sécurité</strong> : Compréhension approfondie des mécanismes JWT, RBAC et des bonnes pratiques d'authentification.</p>
+                    
+                    <p><strong>Integration testing</strong> : Mise en place de tests d'intégration avec environnement dockerisé pour validation complète des workflows.</p>
+                    
+                    <p><strong>Documentation technique</strong> : Importance de la documentation utilisateur et technique pour l'adoption d'outils CLI.</p>
                 </div>
             </div>
         </div>
@@ -253,18 +302,18 @@
     <section class="project-navigation">
         <div class="container">
             <div class="project-nav-arrows">
-                <a href="[PREV_PROJECT].html" class="nav-arrow prev-project">
+                <a href="audioprothese-plus.html" class="nav-arrow prev-project">
                     <span class="arrow">←</span>
                     <div class="project-info">
                         <span class="nav-label">Projet précédent</span>
-                        <span class="project-title">[PREV_PROJECT_TITLE]</span>
+                        <span class="project-title">Infrastructure AudioProthèse+</span>
                     </div>
                 </a>
                 
-                <a href="[NEXT_PROJECT].html" class="nav-arrow next-project">
+                <a href="homelab-k8s.html" class="nav-arrow next-project">
                     <div class="project-info">
                         <span class="nav-label">Projet suivant</span>
-                        <span class="project-title">[NEXT_PROJECT_TITLE]</span>
+                        <span class="project-title">Homelab Kubernetes</span>
                     </div>
                     <span class="arrow">→</span>
                 </a>
@@ -278,8 +327,8 @@
             <div class="footer-actions">
                 <a href="../index.html" class="btn-outline">← Retour au Portfolio</a>
                 <div class="project-links">
-                    <a href="[GITHUB_URL]" class="btn-primary" target="_blank">
-                        Voir sur GitHub
+                    <a href="https://gitlab.com/alain-jordan/golang-dm" class="btn-primary" target="_blank">
+                        Voir sur GitLab
                     </a>
                     <a href="../index.html#contact" class="btn-secondary">
                         Me Contacter
