@@ -1,294 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homelab - Alain Cheng DevOps Portfolio</title>
-    <meta name="description" content="[DESCRIPTION_PROJET] - Détails du projet par Alain Cheng, DevOps Engineer">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../css/project-detail.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bientôt disponible — Mon Projet</title>
+  <meta name="description" content="Ce projet de mon portfolio arrive très bientôt. Restez connectés !" />
+  <meta name="robots" content="noindex,follow" />
+
+  <!-- Open Graph (optionnel) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bientôt disponible — Mon Projet">
+  <meta property="og:description" content="Ce projet arrive très bientôt. Restez connectés !">
+
+  <style>
+    :root{
+      --bg-start:#0f1226;
+      --bg-end:#1a1f3b;
+      --card:#101429cc;
+      --text:#eef0ff;
+      --muted:#aab0d6;
+      --accent:#7c9aff;
+      --accent-2:#8ef6ff;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 80% -10%, var(--accent-2)10%, transparent 40%),
+                  radial-gradient(900px 700px at -10% 110%, #6d51ff33 0%, transparent 45%),
+                  linear-gradient(160deg, var(--bg-start), var(--bg-end));
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+    }
+
+    .wrap{
+      width:min(860px, 92vw);
+      padding:28px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /* Subtle grid */
+    .wrap::before{
+      content:"";
+      position:absolute; inset:-1px;
+      background-image: linear-gradient(#ffffff0e 1px, transparent 1px),
+                        linear-gradient(90deg, #ffffff10 1px, transparent 1px);
+      background-size: 24px 24px;
+      mask-image: radial-gradient(80% 80% at 50% 50%, #000 55%, transparent 100%);
+      opacity:.35;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    header{
+      display:flex; align-items:center; gap:14px;
+    }
+
+    .logo{
+      width:44px; height:44px; border-radius:12px;
+      display:grid; place-items:center; font-weight:800;
+      background: conic-gradient(from 180deg, var(--accent), var(--accent-2), var(--accent));
+      color:#0b0f22;
+      box-shadow: 0 6px 18px #0006;
+    }
+
+    h1{
+      margin:0;
+      font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.6rem);
+      letter-spacing:.3px;
+      line-height:1.15;
+    }
+    .muted{ color: var(--muted); font-size: .98rem; }
+
+    .card{
+      margin-top:20px;
+      background: var(--card);
+      border: 1px solid #ffffff14;
+      border-radius: calc(var(--radius) - 6px);
+      padding: 22px;
+    }
+
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px dashed #ffffff33; color: var(--text);
+      border-radius:999px; padding:8px 12px; font-size:.9rem;
+      background:#ffffff08;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px; background: var(--accent);
+      box-shadow: 0 0 18px var(--accent);
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100%{ transform: scale(1); opacity: 1; }
+      50%{ transform: scale(1.25); opacity: .65; }
+    }
+
+    .title{
+      margin:10px 0 4px;
+      font-size: clamp(1.3rem, 1rem + 1vw, 1.7rem);
+      font-weight: 700;
+    }
+
+    .actions{ display:flex; flex-wrap:wrap; gap:12px; margin-top:16px; }
+    .btn, .ghost{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 16px; border-radius: 14px; text-decoration:none; font-weight:600;
+      border:1px solid #ffffff25; transition:.25s transform ease, .2s background;
+      backdrop-filter: blur(4px);
+    }
+    .btn{
+      background: linear-gradient(180deg, var(--accent), #6b84ff);
+      color:#0b0f22; border-color: transparent; box-shadow: 0 10px 22px #00000055;
+    }
+    .btn:hover{ transform: translateY(-1px) scale(1.01); }
+    .ghost{ background:#ffffff10; color:var(--text); }
+    .ghost:hover{ background:#ffffff18; transform: translateY(-1px); }
+
+    .progress{
+      height: 10px; background:#ffffff12; border-radius:999px; overflow:hidden; margin-top:18px;
+      border:1px solid #ffffff1c;
+    }
+    .bar{
+      height:100%; width:0%;
+      background: linear-gradient(90deg, var(--accent), #9bd1ff);
+      animation: load 2.4s ease forwards;
+    }
+    @keyframes load { to { width: 68%; } }
+
+    footer{
+      margin-top:22px; display:flex; justify-content:space-between; align-items:center; gap:8px;
+      font-size:.92rem; color:var(--muted);
+      flex-wrap:wrap;
+    }
+    .small{ font-size:.88rem; }
+
+    /* Dark-mode preference handled by design; ensure contrast for forced light mode */
+    @media (prefers-color-scheme: light) {
+      :root{ --text:#10121f; --muted:#43507a; }
+      body{ color:#10121f; }
+      .btn{ color:#0b0f22; }
+    }
+  </style>
 </head>
 <body>
-    <div class="bg-animation"></div>
+  <main class="wrap" role="main" aria-labelledby="titre">
+    <header>
+      <div class="logo" aria-hidden="true">P</div>
+      <div>
+        <h1 id="titre">Projet en cours</h1>
+        <div class="muted">Cette page remplace temporairement le projet de mon portfolio.</div>
+      </div>
+    </header>
 
-    <!-- Navigation Header -->
-    <nav class="project-nav">
-        <div class="container">
-            <div class="nav-content">
-                <a href="../index.html" class="back-btn">
-                    ← Retour Portfolio
-                </a>
-                <div class="project-nav-links">
-                    <a href="#overview" class="nav-link">Vue d'ensemble</a>
-                    <a href="#architecture" class="nav-link">Architecture</a>
-                    <a href="#technologies" class="nav-link">Technologies</a>
-                    <a href="#results" class="nav-link">Résultats</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <section class="card" aria-live="polite">
+      <span class="pill"><span class="dot" aria-hidden="true"></span> Bientôt disponible<span id="dots" aria-hidden="true">…</span></span>
 
-    <!-- Hero Section Projet -->
-    <section class="project-hero">
-        <div class="container">
-            <div class="project-hero-content">
-                <div class="project-status-badge">
-                    <span class="status-dot"></span>
-                    [STATUT_PROJET]
-                </div>
-                
-                <h1 class="project-hero-title">[TITRE_PROJET]</h1>
-                
-                <p class="project-hero-description">
-                    [DESCRIPTION_COURTE_PROJET]
-                </p>
+      <p class="title">On peaufine les détails</p>
+      <p class="muted">
+        Le projet n’est pas encore prêt pour le prime time, mais il arrive très vite.
+        Revenez bientôt ou suivez les mises à jour ↓
+      </p>
 
-                <div class="project-hero-tech">
-                    <!-- Technologies principales -->
-                    <span class="tech-badge">[TECH_1]</span>
-                    <span class="tech-badge">[TECH_2]</span>
-                    <span class="tech-badge">[TECH_3]</span>
-                </div>
+      <div class="actions">
+        <!-- Remplace l’URL ci-dessous par le lien vers ton portfolio -->
+        <a class="ghost" href="/" aria-label="Retour au portfolio">← Retour au portfolio</a>
+        <!-- Remplace # par ton lien (LinkedIn, X, newsletter, etc.) -->
+      </div>
 
-                <div class="project-hero-actions">
-                    <a href="[GITHUB_URL]" class="btn-primary" target="_blank">
-                        🔗 Voir sur GitHub
-                    </a>
-                    <a href="[DEMO_URL]" class="btn-secondary" target="_blank">
-                        🚀 Démo Live
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-hero-visual">
-                <div class="project-hero-image">
-                    <!-- Placeholder pour image/diagramme principal -->
-                    <div class="image-placeholder">
-                        <span>📊 Schéma Architecture</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68" aria-label="Progression estimée">
+        <div class="bar"></div>
+      </div>
     </section>
 
-    <!-- Section Vue d'ensemble -->
-    <section id="overview" class="project-section">
-        <div class="container">
-            <h2 class="section-title">Vue d'ensemble</h2>
-            
-            <div class="project-content-grid">
-                <div class="content-main">
-                    <div class="content-block">
-                        <h3>Contexte</h3>
-                        <div class="content-placeholder">
-                            <!-- À compléter : Contexte du projet -->
-                            <p class="placeholder-text">Décrivez ici le contexte qui a mené à ce projet...</p>
-                        </div>
-                    </div>
-
-                    <div class="content-block">
-                        <h3>Objectifs</h3>
-                        <div class="content-placeholder">
-                            <!-- À compléter : Objectifs du projet -->
-                            <p class="placeholder-text">Listez les objectifs principaux à atteindre...</p>
-                        </div>
-                    </div>
-
-                    <div class="content-block">
-                        <h3>Défis Techniques</h3>
-                        <div class="content-placeholder">
-                            <!-- À compléter : Défis rencontrés -->
-                            <p class="placeholder-text">Décrivez les principaux défis techniques...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-sidebar">
-                    <div class="info-card">
-                        <h4>📅 Timeline</h4>
-                        <div class="content-placeholder">
-                            <p class="placeholder-text">Durée : [DUREE]</p>
-                            <p class="placeholder-text">Début : [DATE_DEBUT]</p>
-                            <p class="placeholder-text">Fin : [DATE_FIN]</p>
-                        </div>
-                    </div>
-
-                    <div class="info-card">
-                        <h4>👥 Équipe</h4>
-                        <div class="content-placeholder">
-                            <p class="placeholder-text">Rôle : [VOTRE_ROLE]</p>
-                            <p class="placeholder-text">Équipe : [TAILLE_EQUIPE]</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Architecture -->
-    <section id="architecture" class="project-section">
-        <div class="container">
-            <h2 class="section-title">Architecture</h2>
-            
-            <div class="architecture-content">
-                <div class="content-block">
-                    <h3>Architecture Générale</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Description architecture -->
-                        <p class="placeholder-text">Décrivez l'architecture générale du système...</p>
-                        
-                        <!-- Placeholder pour diagramme -->
-                        <div class="diagram-placeholder">
-                            <span>🏗️ Diagramme d'Architecture</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-block">
-                    <h3>Infrastructure</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Détails infrastructure -->
-                        <p class="placeholder-text">Détails des composants d'infrastructure...</p>
-                    </div>
-                </div>
-
-                <div class="content-block">
-                    <h3>Sécurité</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Mesures de sécurité -->
-                        <p class="placeholder-text">Mesures de sécurité implémentées...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Technologies -->
-    <section id="technologies" class="project-section">
-        <div class="container">
-            <h2 class="section-title">Technologies</h2>
-            
-            <div class="tech-content">
-                <div class="content-block">
-                    <h3>Stack Technique</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Stack complète -->
-                        <div class="tech-categories">
-                            <div class="tech-category">
-                                <h4>Backend</h4>
-                                <p class="placeholder-text">Technologies backend utilisées...</p>
-                            </div>
-                            
-                            <div class="tech-category">
-                                <h4>Infrastructure</h4>
-                                <p class="placeholder-text">Outils d'infrastructure...</p>
-                            </div>
-                            
-                            <div class="tech-category">
-                                <h4>DevOps</h4>
-                                <p class="placeholder-text">Outils DevOps utilisés...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-block">
-                    <h3>Justifications Techniques</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Pourquoi ces choix -->
-                        <p class="placeholder-text">Expliquez vos choix technologiques...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Résultats -->
-    <section id="results" class="project-section">
-        <div class="container">
-            <h2 class="section-title">Résultats & Impact</h2>
-            
-            <div class="results-content">
-                <div class="content-block">
-                    <h3>Métriques de Performance</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Métriques -->
-                        <div class="metrics-grid">
-                            <div class="metric-card">
-                                <div class="metric-value">[VALEUR_1]</div>
-                                <div class="metric-label">[METRIQUE_1]</div>
-                            </div>
-                            <div class="metric-card">
-                                <div class="metric-value">[VALEUR_2]</div>
-                                <div class="metric-label">[METRIQUE_2]</div>
-                            </div>
-                            <div class="metric-card">
-                                <div class="metric-value">[VALEUR_3]</div>
-                                <div class="metric-label">[METRIQUE_3]</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-block">
-                    <h3>Impact & Bénéfices</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Impact du projet -->
-                        <p class="placeholder-text">Décrivez l'impact et les bénéfices apportés...</p>
-                    </div>
-                </div>
-
-                <div class="content-block">
-                    <h3>Apprentissages</h3>
-                    <div class="content-placeholder">
-                        <!-- À compléter : Ce que vous avez appris -->
-                        <p class="placeholder-text">Partagez vos apprentissages clés...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Navigation entre projets -->
-    <section class="project-navigation">
-        <div class="container">
-            <div class="project-nav-arrows">
-                <a href="[PREV_PROJECT].html" class="nav-arrow prev-project">
-                    <span class="arrow">←</span>
-                    <div class="project-info">
-                        <span class="nav-label">Projet précédent</span>
-                        <span class="project-title">[PREV_PROJECT_TITLE]</span>
-                    </div>
-                </a>
-                
-                <a href="[NEXT_PROJECT].html" class="nav-arrow next-project">
-                    <div class="project-info">
-                        <span class="nav-label">Projet suivant</span>
-                        <span class="project-title">[NEXT_PROJECT_TITLE]</span>
-                    </div>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer actions -->
-    <footer class="project-footer">
-        <div class="container">
-            <div class="footer-actions">
-                <a href="../index.html" class="btn-outline">← Retour au Portfolio</a>
-                <div class="project-links">
-                    <a href="[GITHUB_URL]" class="btn-primary" target="_blank">
-                        Voir sur GitHub
-                    </a>
-                    <a href="../index.html#contact" class="btn-secondary">
-                        Me Contacter
-                    </a>
-                </div>
-            </div>
-        </div>
+    <footer>
+      <div class="small">© <span id="year"></span> Mon Portfolio</div>
+      <div class="small">Contact&nbsp;: <a href="mailto:Alain.cheng@protonmail.com">Alain.cheng@protonmail.com</a></div>
     </footer>
+  </main>
 
-    <script src="../js/project-detail.js"></script>
+  <script>
+    // Animation points de suspension et année dynamique
+    (function(){
+      const dots = document.getElementById('dots');
+      const year = document.getElementById('year');
+      let i = 0;
+      setInterval(() => {
+        i = (i + 1) % 4;
+        dots.textContent = '…'.slice(0, i) || '…';
+      }, 600);
+      year.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
